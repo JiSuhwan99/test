@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <title>배열 점수 계산</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        let arr = [
+            ['john'],
+            ['mike'],
+            ['dave']
+        ];
+        let number = [
+            [75,80,90],
+            [85,70,80],
+            [95,95,60]
+        ];
+        console.log(arr);
+        console.log(number);
+        for(i=0; i<arr.length; i++) {
+        let sum = 0;
+        let avg = 0;
+            for(j=0; j<arr.length; j++) {
+                arr[i].push(number[i][j]);
+                sum += number[i][j];
+            }
+            avg = Math.floor(sum / number.length);
+            arr[i].push(sum);
+            arr[i].push(avg);
+        }
+        arr.unshift(['name','korean','math','science','sum','avg'])
+        console.log(arr);
+    </script>
+</html>
